@@ -1,4 +1,6 @@
-﻿# 🎬 Movie Project
+﻿
+# 🎬 Movie Project
+# https://moviemaina.netlify.app/
 
 Bu proje, HTML ve Tailwind CSS kullanarak oluşturduğum tek sayfalık bir film sitesi tasarımıdır. Tailwind CSS öğrenme sürecimde pratik yapmak amacıyla geliştirilmiştir.
 
