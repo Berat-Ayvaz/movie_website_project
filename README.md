@@ -1,6 +1,6 @@
 ﻿
 # 🎬 Movie Project
-# https://moviemaina.netlify.app/
+# [![Netlify Status](https://api.netlify.com/api/v1/badges/4ec9d3cd-13c2-4fb8-b03b-d937f3a58138/deploy-status)](https://app.netlify.com/projects/moviemaina/deploys)
 
 Bu proje, HTML ve Tailwind CSS kullanarak oluşturduğum tek sayfalık bir film sitesi tasarımıdır. Tailwind CSS öğrenme sürecimde pratik yapmak amacıyla geliştirilmiştir.
 
