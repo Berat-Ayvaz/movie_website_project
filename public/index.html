@@ -29,55 +29,119 @@
       >
         <!--Logo-->
         <a
-          href="#"
+          href="index.html"
           class="pl-4 md:pl-0 text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-red-600 to-gray-600"
           >M&S</a
         >
 
-<!--Mobile Menu-->
-<div id="mobile-menu" class="relative block md:hidden pr-4 cursor-pointer h-12">
-  <div class="space-y-1">
-    <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
-    <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
-    <div class="w-8 h-1 bg-gray-600 rounded-full"></div>
-  </div>
-  <ul
-    id="mobile-menu-list"
-    class="hidden absolute top-12 left-0 right-0 bg-black shadow-lg w-25 h-60  flex flex-col items-center justify-center gap-1 py-4 z-50"
-  >
-    <li>
-      <a href="movie-details.html" class="hover:text-yellow-500 transition duration-500">movies</a>
-    </li>
-    <li>
-      <a href="#" class="hover:text-yellow-500 transition duration-500">celebrities</a>
-    </li>
-    <li>
-      <a href="#" class="hover:text-yellow-500 transition duration-500">blog</a>
-    </li>
-    <li>
-      <a href="#" class="hover:text-yellow-500 transition duration-500">news</a>
-    </li>
-    <li>
-      <a href="#" class="hover:text-yellow-500 transition duration-500">about</a>
-    </li>
-    <li class="p-3">
-      <a href="#" class="bg-red-400 px-3 py-0.5 hover:bg-rose-700 hover:text-gray-600 cursor-pointer transition duration-500 whitespace-nowrap">Login</a>
-    </li>
-    <li>
-      <a href="#" class="bg-red-400 px-1.5 py-0.5 hover:bg-rose-700 hover:text-gray-600 cursor-pointer transition duration-500 whitespace-nowrap">Sign Up</a>
-    </li>
-  </ul>
-</div>
+        <!-- Mobile Menu  -->
+        <section>
+          <!--Menu Button -->
+          <div
+            id="menu-toggle"
+            class="block md:hidden cursor-pointer p-4 z-50 relative"
+          >
+            <div class="space-y-1">
+              <span
+                id="bar1"
+                class="block w-8 h-1 bg-gray-200 rounded transition-transform duration-500"
+              ></span>
+              <span
+                id="bar2"
+                class="block w-8 h-1 bg-gray-200 rounded transition-all duration-500"
+              ></span>
+              <span
+                id="bar3"
+                class="block w-8 h-1 bg-gray-200 rounded transition-transform duration-500"
+              ></span>
+            </div>
+          </div>
 
-<script>
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuList = document.getElementById('mobile-menu-list');
+          <!-- Mobile Menu -->
+          <div
+            id="mobile-menu"
+            class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 backdrop-blur-sm z-40 flex flex-col items-center justify-center gap-6 transition-opacity duration-500"
+          >
+            <a
+              href="movie-details.html"
+              class="text-gray-200 text-xl hover:text-yellow-400 transition"
+              >Movies</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 text-xl hover:text-yellow-400 transition"
+              >Celebrities</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 text-xl hover:text-yellow-400 transition"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 text-xl hover:text-yellow-400 transition"
+              >News</a
+            >
+            <a
+              href="#"
+              class="text-gray-200 text-xl hover:text-yellow-400 transition"
+              >About</a
+            >
+            <div class="flex gap-4 mt-4">
+              <a
+                href="#"
+                class="bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition"
+                >Login</a
+              >
+              <a
+                href="#"
+                class="bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition"
+                >Sign Up</a
+              >
+            </div>
+          </div>
 
-  mobileMenu.addEventListener('click', () => {
-    menuList.classList.toggle('hidden');
-  });
-</script>
+          <!-- Menu Toggle -->
+          <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const bar1 = document.getElementById("bar1");
+            const bar2 = document.getElementById("bar2");
+            const bar3 = document.getElementById("bar3");
 
+            let menuOpen = false;
+
+            menuToggle.addEventListener("click", () => {
+              menuOpen = !menuOpen;
+              mobileMenu.classList.toggle("hidden");
+
+              // Animasyon: Hamburger → X
+              if (menuOpen) {
+                bar1.classList.add("rotate-45", "translate-y-2");
+                bar2.classList.add("opacity-0");
+                bar3.classList.add("-rotate-45", "-translate-y-2");
+              } else {
+                bar1.classList.remove("rotate-45", "translate-y-2");
+                bar2.classList.remove("opacity-0");
+                bar3.classList.remove("-rotate-45", "-translate-y-2");
+              }
+            });
+
+            document.addEventListener("click", function (e) {
+              if (
+                menuOpen &&
+                !menuToggle.contains(e.target) &&
+                !mobileMenu.contains(e.target)
+              ) {
+                mobileMenu.classList.add("hidden");
+                bar1.classList.remove("rotate-45", "translate-y-2");
+                bar2.classList.remove("opacity-0");
+                bar3.classList.remove("-rotate-45", "-translate-y-2");
+                menuOpen = false;
+              }
+            });
+          </script>
+        </section>
 
         <!--Navigation-->
         <nav
