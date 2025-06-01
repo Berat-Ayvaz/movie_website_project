@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-gemunu: "Gemunu";
   --font-opensans: "Open Sans";
 }
 @layer base {
@@ -12,12 +11,9 @@
   h4,
   h5,
   h6 {
-    @apply font-gemunu uppercase;
+    @apply uppercase;
   }
   h2 {
-    @apply text-2xl tracking-wider
-  }
-  a {
-    @apply font-gemunu;
+    @apply text-2xl tracking-wider;
   }
 }

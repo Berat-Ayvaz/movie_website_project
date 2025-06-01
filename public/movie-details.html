@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-950 text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans leading-relaxed">
+    <header
+      class="bg-black py-6 lg:py-8 dark:text-gray-600 text-black uppercase"
+    >
+      <!--Header Container-->
+      <div
+        class="container mx-auto flex items-center justify-between space-x-8 lg:space-x-10"
+      >
+        <!--Logo-->
+        <a
+          href="index.html"
+          class="pl-4 md:pl-0 text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-red-600 to-gray-600"
+          >M&S</a
+        >
+
+        <!--Mobile Menu-->
+        <div class="block md:hidden pr-4">
+          <div class="space-y-1 cursor-pointer"></div>
+          <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
+          <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
+          <div class="w-8 h-1 bg-gray-600 rounded-full"></div>
+        </div>
+
+        <!--Navigation-->
+        <nav
+          class="hidden md:flex flex-wrap items-center justify-between flex-1"
+        >
+          <!--Menu-->
+          <div class="flex items-center lg:text-base space-x-2 lg:space-x-4">
+            <a
+              href="movie-details.html"
+              class="hover:text-yellow-500 transition duration-500"
+              >movies</a
+            >
+            <a href="#" class="hover:text-yellow-500 transition duration-500"
+              >celebrities</a
+            >
+            <a href="#" class="hover:text-yellow-500 transition duration-500"
+              >blog</a
+            >
+            <a href="#" class="hover:text-yellow-500 transition duration-500"
+              >news</a
+            >
+            <a href="#" class="hover:text-yellow-500 transition duration-500"
+              >about</a
+            >
+          </div>
+          <!--Login Area-->
+          <div class="flex items-center space-x-4 lg:space-x-8">
+            <!--Search Area-->
+            <form>
+              <div class="group border-r px-2 mx-2 py-1 border-red-600">
+                <input
+                  type="text"
+                  class="opacity-0 group-hover:opacity-100 bg-transparent border-b border-red-600 focus:outline-none w-24 lg:w-44 transition duration-500"
+                />
+                <button class="-ml-4 group-hover:ml-0 transition duration-500">
+                  <i
+                    class="fas fa-search group-hover:text-red-600 transition duration-500"
+                  ></i>
+                </button>
+              </div>
+            </form>
+            <!--Signup Area-->
+            <div
+              class="flex items-center flex-shrink-0 space-x-4 lg:space-x-8 lg:text-lg"
+            >
+              <a
+                href="#"
+                class="bg-red-400 px-1.5 py-0.5 hover:bg-rose-700 hover:text-gray-600 cursor-pointer transition duration-500 whitespace-nowrap"
+                >Login</a
+              >
+              <a
+                href="#"
+                class="bg-red-400 px-1.5 py-0.5 hover:bg-rose-700 hover:text-gray-600 cursor-pointer transition duration-500 whitespace-nowrap"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Banner Section 1-->
+    <section
+      class="relative bg-cover bg-center h-[500px] flex items-end"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?fit=crop&w=1600&q=80');
+      "
+    >
+      <div
+        class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
+      ></div>
+      <div class="relative z-10 p-6 md:p-12 max-w-4xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+          Inception
+        </h2>
+        <p class="mt-2 text-sm text-gray-400">
+          Action, Sci-Fi, Thriller | 2010
+        </p>
+      </div>
+    </section>
+
+    <!-- Movie Details 1-->
+    <section class="p-6 md:p-12 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Poster -->
+        <div>
+          <img
+            src="/public/images/details_1.jpg"
+            alt="Inception Poster"
+            class="rounded-lg shadow-lg w-full h-full"
+          />
+        </div>
+
+        <!-- Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Directed by:</h3>
+            <p>Christopher Nolan</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Starring:</h3>
+            <p>Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Synopsis:</h3>
+            <p class="text-gray-400">
+              A thief who steals corporate secrets through the use of
+              dream-sharing technology is given the inverse task of planting an
+              idea into the mind of a C.E.O.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Watch Trailer:</h3>
+            <div class="aspect-video mt-2">
+              <iframe
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/YoHD9XEInc0"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner Section 2-->
+    <section
+      class="relative bg-cover bg-center h-[500px] flex items-end"
+      style="
+        background-image: url('data:image/jpeg;base64,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');
+      "
+    >
+      <div
+        class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
+      ></div>
+      <div class="relative z-10 p-6 md:p-12 max-w-4xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+          Interstellar
+        </h2>
+        <p class="mt-2 text-sm text-gray-400">
+          Sci-Fi, Drama, Adventure | 2014
+        </p>
+      </div>
+    </section>
+
+    <!-- Movie Details 2-->
+    <section class="p-6 md:p-12 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Poster -->
+        <div>
+          <img
+            src="/public/images/details_2.jpg"
+            alt="Interstellar Poster"
+            class="rounded-lg shadow-lg w-full h-full"
+          />
+        </div>
+
+        <!-- Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Directed by:</h3>
+            <p>Christopher Nolan</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Starring:</h3>
+            <p>Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Synopsis:</h3>
+            <p class="text-gray-400">
+              In a future where Earth is becoming uninhabitable, a group of
+              astronauts travel through a wormhole in search of a new home for
+              humanity. A deeply emotional journey exploring love, time, and
+              survival.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Watch Trailer:</h3>
+            <div class="aspect-video mt-2">
+              <iframe
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/zSWdZVtXT7E?si=P0b2L_KHmMqCsr_a"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner Section 3 -->
+    <section
+      class="relative bg-center h-[500px] flex items-end"
+      style="
+        background-image: url('https://images.mubicdn.net/images/film/918/cache-47457-1689617201/image-w1280.jpg?');
+      "
+    >
+      <div
+        class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
+      ></div>
+      <div class="relative z-10 p-6 md:p-12 max-w-4xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+          Fight Club
+        </h2>
+        <p class="mt-2 text-sm text-gray-400">Drama, Thriller | 1999</p>
+      </div>
+    </section>
+
+    <!-- Movie Details 3-->
+    <section class="p-6 md:p-12 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Poster -->
+        <div>
+          <img
+            src="/public/images/details_3.jpg"
+            alt="Inception Poster"
+            class="rounded-lg shadow-lg w-full h-full"
+          />
+        </div>
+
+        <!-- Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Directed by:</h3>
+            <p>David Fincher</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Starring:</h3>
+            <p>Brad Pitt, Edward Norton, Helena Bonham Carter</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Synopsis:</h3>
+            <p class="text-gray-400">
+              A disillusioned man starts an underground fight club with a
+              mysterious soap salesman. What begins as an act of rebellion
+              evolves into something darker and more dangerous.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Watch Trailer:</h3>
+            <div class="aspect-video mt-2">
+              <iframe
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/BdJKm16Co6M?si=mTw7EwvJvEIM9N6Q"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner Section 4 -->
+    <section
+      class="relative bg-cover bg-center h-[500px] flex items-end"
+      style="
+        background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/06/92/24/8f/the-grand-budapest-hotel.jpg');
+      "
+    >
+      <div
+        class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
+      ></div>
+      <div class="relative z-10 p-6 md:p-12 max-w-4xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+          The Grand Budapest Hotel
+        </h2>
+        <p class="mt-2 text-sm text-gray-400">Comedy, Drama | 2014</p>
+      </div>
+    </section>
+
+    <!-- Movie Details 3-->
+    <section class="p-6 md:p-12 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Poster -->
+        <div>
+          <img
+            src="/public/images/details_4.jpg"
+            alt="Inception Poster"
+            class="rounded-lg shadow-lg w-full h-full"
+          />
+        </div>
+
+        <!-- Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Directed by:</h3>
+            <p>Wes Anderson</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Starring:</h3>
+            <p>Ralph Fiennes, Tony Revolori, Saoirse Ronan</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Synopsis:</h3>
+            <p class="text-gray-400">
+              The whimsical story of a legendary concierge and a young lobby boy
+              as they become involved in the theft of a priceless painting and a
+              battle over a family fortune — all set against a backdrop of war
+              and elegance.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300">Watch Trailer:</h3>
+            <div class="aspect-video mt-2">
+              <iframe
+                class="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/zru-1DbbcsA?si=Xr56nTXNTVk2hYrQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <footer class="bg-black text-gray-500">
+      <!-- Footer Container  -->
+      <div class="container flex flex-col md:flex-row px-10 lg:px-0 pb-8">
+        <!-- Footer Left  -->
+        <div class="basis-1/3">
+          <a
+            href="#"
+            class="text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-red-600 to-gray-600"
+            >M&S</a
+          >
+          <!-- Footer Left Details  -->
+          <p class="">2025 software &copy;No CopyRight</p>
+        </div>
+        <!-- Footer Middle  -->
+        <div class="basis-1/3">
+          <h2 class="text-red-600">LINKS</h2>
+          <div class="grid grid-cols-5 gap-2 uppercase">
+            <a
+              href="movie-details.html"
+              class="col-span-2 hover:text-yellow-500 duration-500"
+              >Movie</a
+            >
+            <a href="" class="col-span-2 hover:text-yellow-500 duration-500"
+              >Celebrities</a
+            >
+            <a href="" class="col-span-2 hover:text-yellow-500 duration-500"
+              >Blog</a
+            >
+            <a href="" class="col-span-2 hover:text-yellow-500 duration-500"
+              >News</a
+            >
+            <a href="" class="col-span-2 hover:text-yellow-500 duration-500"
+              >About</a
+            >
+          </div>
+        </div>
+        <!-- Footer Right  -->
+        <div class="basis-1/3">
+          <h2 class="text-red-600">Follow us</h2>
+          <form action="" class="flex">
+            <input
+              type="email"
+              placeholder="  example@gmail.com"
+              class="py-1 px-2 bg-transparent border border-red-600 placeholder:text-xs outline-none"
+            />
+            <button
+              class="py-1 px-2 transparent border border-red-600 bg-red-600 uppercase"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
