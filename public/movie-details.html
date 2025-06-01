@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Details</title>
+    <title>Movie</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-sans leading-relaxed">
@@ -21,13 +21,49 @@
           >M&S</a
         >
 
-        <!--Mobile Menu-->
-        <div class="block md:hidden pr-4">
-          <div class="space-y-1 cursor-pointer"></div>
-          <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
-          <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
-          <div class="w-8 h-1 bg-gray-600 rounded-full"></div>
-        </div>
+<!--Mobile Menu-->
+<div id="mobile-menu" class="relative block md:hidden pr-4 cursor-pointer h-12">
+  <div class="space-y-1">
+    <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
+    <div class="w-8 h-1 bg-gray-600 rounded-full mb-1"></div>
+    <div class="w-8 h-1 bg-gray-600 rounded-full"></div>
+  </div>
+  <ul
+    id="mobile-menu-list"
+    class="hidden absolute top-12 left-0 right-0 bg-black shadow-lg w-25 h-60  flex flex-col items-center justify-center gap-1 py-4 z-50"
+  >
+    <li>
+      <a href="movie-details.html" class="hover:text-yellow-500 transition duration-500">movies</a>
+    </li>
+    <li>
+      <a href="#" class="hover:text-yellow-500 transition duration-500">celebrities</a>
+    </li>
+    <li>
+      <a href="#" class="hover:text-yellow-500 transition duration-500">blog</a>
+    </li>
+    <li>
+      <a href="#" class="hover:text-yellow-500 transition duration-500">news</a>
+    </li>
+    <li>
+      <a href="#" class="hover:text-yellow-500 transition duration-500">about</a>
+    </li>
+    <li class="p-3">
+      <a href="#" class="bg-red-400 px-3 py-0.5 hover:bg-rose-700 hover:text-gray-600 cursor-pointer transition duration-500 whitespace-nowrap">Login</a>
+    </li>
+    <li>
+      <a href="#" class="bg-red-400 px-1.5 py-0.5 hover:bg-rose-700 hover:text-gray-600 cursor-pointer transition duration-500 whitespace-nowrap">Sign Up</a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuList = document.getElementById('mobile-menu-list');
+
+  mobileMenu.addEventListener('click', () => {
+    menuList.classList.toggle('hidden');
+  });
+</script>
 
         <!--Navigation-->
         <nav
@@ -100,10 +136,10 @@
         class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
       ></div>
       <div class="relative z-10 p-6 md:p-12 max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-600  group-hover:mb-1 duration-500">
           Inception
         </h2>
-        <p class="mt-2 text-sm text-gray-400">
+        <p class="text-yellow-300 tracking-wider group-hover:mb-1 duration-500">
           Action, Sci-Fi, Thriller | 2010
         </p>
       </div>
@@ -164,10 +200,10 @@
         class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
       ></div>
       <div class="relative z-10 p-6 md:p-12 max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-600">
           Interstellar
         </h2>
-        <p class="mt-2 text-sm text-gray-400">
+        <p class="text-yellow-300 tracking-wider group-hover:mb-1 duration-500">
           Sci-Fi, Drama, Adventure | 2014
         </p>
       </div>
@@ -229,10 +265,10 @@
         class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
       ></div>
       <div class="relative z-10 p-6 md:p-12 max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-600">
           Fight Club
         </h2>
-        <p class="mt-2 text-sm text-gray-400">Drama, Thriller | 1999</p>
+        <p class="text-yellow-300 tracking-wider group-hover:mb-1 duration-500">Drama, Thriller | 1999</p>
       </div>
     </section>
 
@@ -291,10 +327,10 @@
         class="bg-gradient-to-t from-black via-transparent to-transparent w-full h-full absolute inset-0"
       ></div>
       <div class="relative z-10 p-6 md:p-12 max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-600">
           The Grand Budapest Hotel
         </h2>
-        <p class="mt-2 text-sm text-gray-400">Comedy, Drama | 2014</p>
+        <p class="text-yellow-300 tracking-wider group-hover:mb-1 duration-500">Comedy, Drama | 2014</p>
       </div>
     </section>
 
@@ -351,7 +387,7 @@
         <!-- Footer Left  -->
         <div class="basis-1/3">
           <a
-            href="#"
+            href="index.html"
             class="text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-red-600 to-gray-600"
             >M&S</a
           >
